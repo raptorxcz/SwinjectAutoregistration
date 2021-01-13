@@ -11,7 +11,7 @@ let package = Package(
         .library(
             name: "SwinjectAutoregistration-Dynamic",
             type: .dynamic,
-            targets: ["SwinjectAutoregistration"])
+            targets: ["SwinjectAutoregistration-Dynamic"])
         
     ],
     dependencies: [
@@ -22,6 +22,12 @@ let package = Package(
             name: "SwinjectAutoregistration",
             dependencies: [
                 "Swinject",
+            ],
+            path: "Sources"),
+        .target(
+            name: "SwinjectAutoregistration-Dynamic",
+            dependencies: [
+                "Swinject-Dynamic",
             ],
             path: "Sources"),
     ]
